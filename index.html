@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
 </head>
 <body>
     <canvas id="canvas"></canvas>
@@ -15,7 +17,7 @@
             <p>Pay<span style="font-weight: 700;">Hajj</span> </p>
             </div>
 <nav class="header1">
-    <button class="menu-btn">Menu ☰</button>
+    <button class="menu-btn">Menu &nbsp;&nbsp;☰</button>
 
     <div class="mobile-menu">
         <a href="">Save</a>
@@ -454,7 +456,21 @@ support@payhajj.com <br><br>
         </footer>
     </main>
 </body>
+
 <script>
+
+const mobileMenu = document.querySelector(".mobile-menu");
+
+document.querySelector(".menu-btn").addEventListener("click", () => {
+    mobileMenu.classList.toggle("active")
+    const links = mobileMenu.querySelectorAll("a")
+    if(mobileMenu.classList.contains("active")){
+        gsap.fromTo(links,{opacity:0,y:20},{opacity:1,y:0,stagger:0.2})
+    }else{
+        gsap.fromTo(links,{opacity:1,y:0},{opacity:0,y:20,stagger:0.2})
+    }
+});
+
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 const style = window.getComputedStyle(canvas)
