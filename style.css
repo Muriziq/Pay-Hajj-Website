@@ -673,8 +673,7 @@ footer section:first-child button{
     align-items: center;
 }
 footer section:first-child :is(button:hover,button:active){
-    background-color: #4338CA;
-    border: 1px solid #1E1B4B;
+    background-color: #A16207;
 }
 footer section:first-child > div{
     display: flex;
@@ -789,6 +788,9 @@ margin: 0 auto;
         height: 150%;
         width: auto;
     }
+    .footer3{
+        font-size: 1.1rem;
+    }
 }
 @media (max-width: 768px){
     header > section img{
@@ -888,7 +890,7 @@ margin: 0 auto;
         align-items: center;
     }
     footer section:last-of-type{
-        gap: 0;
+        gap: 0.5rem;
         justify-content: space-between;
     }
 
