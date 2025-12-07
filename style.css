@@ -132,6 +132,8 @@ button,a{
     flex-direction: row;
     justify-content: space-between;
     height: 80vh;
+    gap: 2rem;
+    align-items: center;
 }
 .first section{
     display: flex;
@@ -448,6 +450,8 @@ gap: 0.5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
 }
 .fourth1 > div:first-child{
     width: 450px;
@@ -740,7 +744,7 @@ footer section:last-of-type{
     font-size: 1.1rem;
     text-wrap: nowrap;
 }
-@media (min-width: 600px) and (max-width: 768px) {
+@media (min-width: 600px) and (max-width: 767.99px) {
 .second2,
 .first > div{
 width: 60vw;
@@ -749,6 +753,52 @@ margin: 0 auto;
 .first h1 br{
     display: none;
 }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+    .first,.second,.third{
+        height: auto;
+    }
+    .first button{
+            text-wrap: nowrap;
+    }
+        .third1{
+        text-align: center;
+
+    }
+        .third{
+        padding: 1rem;
+        flex-direction: column;
+        height: auto;
+        gap: 1.5rem;
+
+    }
+    .third > img{
+        height: 100%;
+        width: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        object-fit: contain;
+    }
+    .third2{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        align-items: center;
+        width: 100%;
+    }
+    .third2  section{
+        position: static ;
+    }
+    main .third{
+        height: auto;
+    }
+        .seventh div{
+        width: 100%;
+    }
 }
 @media (max-width: 599px){
     .first br,.second1 br,footer h1 br{
@@ -762,6 +812,9 @@ margin: 0 auto;
     }
     .header2{
         justify-content: flex-end;
+    }
+    .header2 ,.mobile-menu{
+        gap: 0.5rem;
     }
     .header1{
     position: relative;
@@ -792,7 +845,7 @@ margin: 0 auto;
         font-size: 1.1rem;
     }
 }
-@media (max-width: 768px){
+@media (max-width: 767.99px){
     header > section img{
         height: 30px;
     }
@@ -846,7 +899,9 @@ margin: 0 auto;
     }
     .third2{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 1rem;
         align-items: center;
         width: 100%;
