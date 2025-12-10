@@ -20,10 +20,10 @@
     <button class="menu-btn">Menu &nbsp;&nbsp;☰</button>
 
     <div class="mobile-menu">
-        <a href="">Save</a>
-        <a href="">Packages</a>
-        <a href="">About Us</a>
-        <a href="">FAQs</a>
+        <a href="#second">Save</a>
+        <a href="#third">Packages</a>
+        <a href="#fourth">About Us</a>
+        <a href="#seventh">FAQs</a>
     </div>
 </nav>
 
@@ -47,7 +47,7 @@
                 <img src="images/Group 37158.svg" alt="">
             </div>
         </article>
-        <article class="second">
+        <article id="second" class="second">
             <section class="second1">
                 <h2>Save with Intention</h2>
                 <p>Build consistency effortlessly. Track your progress, build discipline, and <br> take  meaningful steps toward your goal.</p>
@@ -65,7 +65,7 @@
                 <img class="second2img" src="images/Group 1597884889.svg" alt="">
             </section>
         </article>
-        <article class="third">
+        <article id="third" class="third">
             <img src="images/Vector 1068.svg" alt="">
             <div class="third1">
                 <h1>Packages Tailored <br> to Your Journey</h1>
@@ -164,7 +164,7 @@
                 </section>
             </div>
         </article>
-        <article class="fourth">
+        <article class="fourth" id="fourth">
             <div>
                 <h2>About Us</h2>
                 <p>A Purpose-Built Platform for a Purposeful Journey</p>
@@ -401,7 +401,7 @@ We are a technology-first team with a passion for building simple, intuitive sol
                 </div>
             </section>
         </article>
-        <article class="seventh">
+        <article id="seventh" class="seventh">
             <h1>Frequently Asked Questions</h1>
             <section>
                 <div>
@@ -458,6 +458,13 @@ support@payhajj.com <br><br>
 </body>
 
 <script>
+document.querySelectorAll('.header1 a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href'))
+      .scrollIntoView({ behavior: 'smooth' });
+  });
+});
 
 const mobileMenu = document.querySelector(".mobile-menu");
 
